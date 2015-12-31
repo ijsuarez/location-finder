@@ -1,15 +1,15 @@
 # location-finder
 Converts location data encoded in CSV to binary and reads from memory
 
-'''
+```
 CSV has the following format:
 ID,Continent,Country,City
 1234134,Asia,Korea,Busan
 342432,Europe,Paris,France
 431435,North America,United States,Saint Louis
-'''
+```
 
-'''
+```
 Inputs/outputs:
 
 Input: “./location_finder.bin encode path_to_file_to_encode.csv”
@@ -35,4 +35,4 @@ Output: “Invalid Input”
 
 Input: “exit”
 Output: None, but the program should terminate
-'''
+```
