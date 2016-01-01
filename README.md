@@ -37,4 +37,6 @@ Input: “exit”
 Output: None, but the program should terminate
 ```
 
-Currently there's a minor bug where specified inputs ("country city continent" etc) have a comma at the end. May or may not ever be fixed.
+### TO-DO
+* Remove commas from specific output strings
+* Refine main method to be more robust
