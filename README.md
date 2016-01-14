@@ -9,6 +9,18 @@ ID,Continent,Country,City
 431435,North America,United States,Saint Louis
 ```
 
+The program encodes the CSV into a binary file that has the following structure:
+
+* An int to store the number of location headers in the file
+* The location headers (in sorted order based off the ID value)
+* The dataload (in the order that the data is read aka unsorted)
+
+A location header stores the location's ID value, a pointer to the data within the dataload, and the number of characters for each attribute (size of continent, country, and city strings). A binary search is performed on the headers, and once a matching header is found it accesses the data from the stored pointer.
+
+* Encoding time complexity is O(nlgn) from the header sorting, where n is the number of lines in the file
+* Decoding time complexity is O(lgn) from the lookup using binary search, where n is the number of lines in the file
+* Space complexity for both encoding and decoding is O(n), where n is the number of lines in the file
+
 ```
 Inputs/outputs:
 
